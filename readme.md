@@ -50,6 +50,7 @@ $model = new CustomModel(TABLENAME,ID);
 ## Documentation
 
 PHPCustomModel converts tables to models. A sample database table that name is "employees"
+
 ``
 +------+-----------+----------------------+
 | id   | firstname | jobtitle             |
@@ -94,6 +95,7 @@ and update it;
 $employee->update();
 
 Now our table looks like below;
+
 ``
 +------+-----------+----------------------+
 | id   | firstname | jobtitle             |
@@ -112,6 +114,7 @@ If you want to delete record, use;
 $employee->delete(); 
 
 Now our table;
+
 ``
 +------+-----------+----------------------+
 | id   | firstname | jobtitle             |
@@ -135,6 +138,7 @@ $employee->jobtitle = "King of the World";
 $employee->insert();
 
 Now our table look like below;
+
 ``
 +------+-----------+----------------------+
 | id   | firstname | jobtitle             |
