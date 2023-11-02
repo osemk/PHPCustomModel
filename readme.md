@@ -63,38 +63,40 @@ PHPCustomModel converts tables to models. A sample database table that name is "
 Using PHPCustomModel we can easily convert this table to a model and we can easily do CRUD processes on table like below.
 
 ## Bring table
+```
  $employee = new CustomModel("employees", 1); 
-
+```
 This will fetch row with ID =1 and assign columns to $employee var.
 
 We can check if has a record with ID=1, 
 
 ## Check records
-``
+```
 $employee->hasRecord(); // if true id=1 founded, if false there is no record.
-``
+```
 Now the current object includes these;
 `` id=1, firstname=Diane, jobtitle=President ``
 
 We can change these parameters using model easily like below;
 
 ## Change parameters
-``
+```
 $employee->firstname = "Angel";
 $employee->jobtitle = "New President";
-``
+```
 or
 
-``
+```
 $employee->veri['firstname'] = "Angel";
 $employee->veri['jobtitle'] = "New President";
-``
+```
 and update it;
 
 
 ## Update
+```
 $employee->update();
-
+```
 Now our table looks like below;
 
 | id   | firstname | jobtitle             |
@@ -110,9 +112,9 @@ That is it!
 If you want to delete record, use;
 
 ## Delete
-``
+```
 $employee->delete(); 
-``
+```
 Now our table;
 
 | id   | firstname | jobtitle             |
@@ -130,11 +132,11 @@ Inserting a new row is also easy, just don't send an ID like below,
 $employee = new CustomModel("employees",0);
 
 It creates new model from scracth. Now you can add some strings
-``
+```
 $employee->firstname = "Onur";
 $employee->jobtitle = "King of the World";
 $employee->insert();
-``
+```
 Now our table look like below;
 
 | id   | firstname | jobtitle             |
@@ -150,22 +152,22 @@ Now our table look like below;
 
 You can fetch directly using other columns except ids.
 
-``$employee = new CustomModel("employees",['firstname' => 'Onur']);`` it directly fetches id=6 but this column is not an identifier may be there are some records too, so it fetches only latest "Onur" record. 
+```$employee = new CustomModel("employees",['firstname' => 'Onur']);``` it directly fetches id=6 but this column is not an identifier may be there are some records too, so it fetches only latest "Onur" record. 
 
 So you can make more unique your request with adding extra columns like below;
-``$employee = new CustomModel("employees",['firstname' => 'Onur', 'jobtitle' => 'King of the World']);``
+```$employee = new CustomModel("employees",['firstname' => 'Onur', 'jobtitle' => 'King of the World']);```
 
 ## Other easy method
 
 The best method for this library is save() method. When you want to change or insert a record to table, you can use save().
-``
+```
 $employee = new CustomModel("employees", 7); 
 $employee->firstname = "Ali";
 $employee->jobtitle = "Amele";
 
 $employee->save();
 // if there is id=7 currently it updates record 7; if there is no id=7 record, it inserts automaticly to id=7.
-``
+```
 So awesome, didn't it?
 
 ## License
