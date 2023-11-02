@@ -1,0 +1,23 @@
+{
+    "name": "osemk/PHPCustomModel",
+    "description": "PHP CustomModel let's you to convert your MYSQL table automaticly to a PHP Model",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Onur Erginer",
+            "email": "onurerginer@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osemk/PHPCustomModel/issues",
+        "wiki": "https://github.com/osemk/PHPCustomModel/blob/main/readme.md"
+    },
+    "require": {
+        "php": "^7.3",
+    },
+    "autoload": {
+        "psr-4": {
+            "CustomModel\\": "src/CustomModel"
+        }
+    }
+}
