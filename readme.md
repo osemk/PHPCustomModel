@@ -147,22 +147,22 @@ Now our table look like below;
 
 You can fetch directly using other columns except ids.
 
-$employee = new CustomModel("employees",['firstname' => 'Onur']); it directly fetches id=6 but this column is not an identifier may be there are some records too, so it fetches only latest "Onur" record. 
+``$employee = new CustomModel("employees",['firstname' => 'Onur']);`` it directly fetches id=6 but this column is not an identifier may be there are some records too, so it fetches only latest "Onur" record. 
 
 So you can make more unique your request with adding extra columns like below;
-$employee = new CustomModel("employees",['firstname' => 'Onur', 'jobtitle' => 'King of the World']);
+``$employee = new CustomModel("employees",['firstname' => 'Onur', 'jobtitle' => 'King of the World']);``
 
 ## Other easy method
 
 The best method for this library is save() method. When you want to change or insert a record to table, you can use save().
-
+``
 $employee = new CustomModel("employees", 7); 
 $employee->firstname = "Ali";
 $employee->jobtitle = "Amele";
 
 $employee->save();
 // if there is id=7 currently it updates record 7; if there is no id=7 record, it inserts automaticly to id=7.
-
+``
 So awesome, didn't it?
 
 ## License
