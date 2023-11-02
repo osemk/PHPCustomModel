@@ -95,16 +95,14 @@ $employee->update();
 
 Now our table looks like below;
 
-``
-+------+-----------+----------------------+
 | id   | firstname | jobtitle             |
-+------+-----------+----------------------+
+| ---- |:---------:| --------------------:|
 | 1    | Angel     | New President        |
 | 2    | Mary      | VP Sales             |
 | 3    | Jeff      | VP Marketing         |
 | 4    | William   | Sales Manager (APAC) |
 | 5    | Gerard    | Sale Manager (EMEA)  |
-``
+
 That is it!
 
 If you want to delete record, use;
@@ -114,15 +112,13 @@ $employee->delete();
 
 Now our table;
 
-``
-+------+-----------+----------------------+
 | id   | firstname | jobtitle             |
-+------+-----------+----------------------+
+| ---- |:---------:| --------------------:|
 | 2    | Mary      | VP Sales             |
 | 3    | Jeff      | VP Marketing         |
 | 4    | William   | Sales Manager (APAC) |
 | 5    | Gerard    | Sale Manager (EMEA)  |
-``
+
 That is awesome!
 
 ## Insert New record
@@ -138,16 +134,14 @@ $employee->insert();
 
 Now our table look like below;
 
-``
-+------+-----------+----------------------+
 | id   | firstname | jobtitle             |
-+------+-----------+----------------------+
+| ---- |:---------:| --------------------:|
 | 2    | Mary      | VP Sales             |
 | 3    | Jeff      | VP Marketing         |
 | 4    | William   | Sales Manager (APAC) |
 | 5    | Gerard    | Sale Manager (EMEA)  |
 | 6    | Onur      | King of the World    |
-``
+
 
 ## Other fetching methods
 
