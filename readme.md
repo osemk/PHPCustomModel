@@ -51,16 +51,15 @@ $model = new CustomModel(TABLENAME,ID);
 
 PHPCustomModel converts tables to models. A sample database table that name is "employees"
 
-``
-+------+-----------+----------------------+
+
 | id   | firstname | jobtitle             |
-+------+-----------+----------------------+
+| ---- |:---------:| --------------------:|
 | 1    | Diane     | President            |
 | 2    | Mary      | VP Sales             |
 | 3    | Jeff      | VP Marketing         |
 | 4    | William   | Sales Manager (APAC) |
 | 5    | Gerard    | Sale Manager (EMEA)  |
-``
+
 Using PHPCustomModel we can easily convert this table to a model and we can easily do CRUD processes on table like below.
 
 ## Bring table
