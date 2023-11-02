@@ -50,7 +50,7 @@ $model = new CustomModel(TABLENAME,ID);
 ## Documentation
 
 PHPCustomModel converts tables to models. A sample database table that name is "employees"
-
+``
 +------+-----------+----------------------+
 | id   | firstname | jobtitle             |
 +------+-----------+----------------------+
@@ -59,7 +59,7 @@ PHPCustomModel converts tables to models. A sample database table that name is "
 | 3    | Jeff      | VP Marketing         |
 | 4    | William   | Sales Manager (APAC) |
 | 5    | Gerard    | Sale Manager (EMEA)  |
-
+``
 Using PHPCustomModel we can easily convert this table to a model and we can easily do CRUD processes on table like below.
 
 ## Bring table
@@ -94,6 +94,7 @@ and update it;
 $employee->update();
 
 Now our table looks like below;
+``
 +------+-----------+----------------------+
 | id   | firstname | jobtitle             |
 +------+-----------+----------------------+
@@ -102,7 +103,7 @@ Now our table looks like below;
 | 3    | Jeff      | VP Marketing         |
 | 4    | William   | Sales Manager (APAC) |
 | 5    | Gerard    | Sale Manager (EMEA)  |
-
+``
 That is it!
 
 If you want to delete record, use;
@@ -111,7 +112,7 @@ If you want to delete record, use;
 $employee->delete(); 
 
 Now our table;
-
+``
 +------+-----------+----------------------+
 | id   | firstname | jobtitle             |
 +------+-----------+----------------------+
@@ -119,7 +120,7 @@ Now our table;
 | 3    | Jeff      | VP Marketing         |
 | 4    | William   | Sales Manager (APAC) |
 | 5    | Gerard    | Sale Manager (EMEA)  |
-
+``
 That is awesome!
 
 ## Insert New record
@@ -134,7 +135,7 @@ $employee->jobtitle = "King of the World";
 $employee->insert();
 
 Now our table look like below;
-
+``
 +------+-----------+----------------------+
 | id   | firstname | jobtitle             |
 +------+-----------+----------------------+
@@ -143,7 +144,7 @@ Now our table look like below;
 | 4    | William   | Sales Manager (APAC) |
 | 5    | Gerard    | Sale Manager (EMEA)  |
 | 6    | Onur      | King of the World    |
-
+``
 
 ## Other fetching methods
 
