@@ -70,17 +70,19 @@ This will fetch row with ID =1 and assign columns to $employee var.
 We can check if has a record with ID=1, 
 
 ## Check records
+``
 $employee->hasRecord(); // if true id=1 founded, if false there is no record.
-
+``
 Now the current object includes these;
 `` id=1, firstname=Diane, jobtitle=President ``
 
 We can change these parameters using model easily like below;
 
 ## Change parameters
+``
 $employee->firstname = "Angel";
 $employee->jobtitle = "New President";
-
+``
 or
 
 ``
@@ -108,8 +110,9 @@ That is it!
 If you want to delete record, use;
 
 ## Delete
+``
 $employee->delete(); 
-
+``
 Now our table;
 
 | id   | firstname | jobtitle             |
@@ -127,11 +130,11 @@ Inserting a new row is also easy, just don't send an ID like below,
 $employee = new CustomModel("employees",0);
 
 It creates new model from scracth. Now you can add some strings
-
+``
 $employee->firstname = "Onur";
 $employee->jobtitle = "King of the World";
 $employee->insert();
-
+``
 Now our table look like below;
 
 | id   | firstname | jobtitle             |
