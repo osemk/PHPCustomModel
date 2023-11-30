@@ -1,5 +1,5 @@
 {
-    "name": "osemk/PHPCustomModel",
+    "name": "osemk/php-custom-model",
     "description": "PHP CustomModel let's you to convert your MYSQL table automaticly to a PHP Model",
     "license": "MIT",
     "authors": [
