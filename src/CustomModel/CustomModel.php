@@ -406,6 +406,8 @@
 			else{
 				if(!$hatasorgugoster) // bu hatasorgu göster hem sorgu göstermek için hem de updateable değilse bir şey yapma
 				throw new Exception("Nothing changed ,the object isn't updateable");
+				else
+					return true;
 			}
 		}
 		
