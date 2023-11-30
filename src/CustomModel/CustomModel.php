@@ -1,4 +1,13 @@
-<? //written by Onur Erginer
+<? 
+/*
+ * This file is a part of the php-custom-model project.
+ *
+ * Copyright (c) 2023-present osemk - Onur Erginer <onurerginer@gmail.com>
+ *
+ * This file is subject to the MIT license that is bundled
+ * with this source code in the LICENSE.md file.
+ */
+
 	
 	class CustomModel extends Veritabani {
 		public $veri =[];
@@ -30,7 +39,6 @@
 					$this->deleteable = true;
 				}
 				else{
-					// echo "insertable oldu";
 					$this->insertable = true;
 				}
 			}
@@ -189,7 +197,6 @@
 			if($this->veri[$varName]!=$value && !$this->insertable){
 				$this->updateable = true;
 				
-				// echo "updateable oldu";
 			}
 			$this->veri[$varName] = $value;
 		}
@@ -255,7 +262,6 @@
 					$sorgu .= $this->createInsertValues($j['Type'],$j['Field'],$this->veri[$i],$j['Extra']);
 				}
 				$sorgu = mb_substr($sorgu,0,-1).')';
-				// echo $sorgu;
 				if($this->sorgu($sorgu)){
 					$this->insertable = false;
 					$this->deleteable = true;
@@ -279,13 +285,10 @@
 		public function save(){
 			
 			$this->checkUpdateable();
-			// echo "geldi".$this->updateable;
 			if($this->updateable){
 				return $this->update(true);
 				}else{
-				// echo " no inserting";
 				if($this->insertable){
-					// echo "inserting";
 					return $this->insert(true);
 				}
 				else return false;
@@ -304,7 +307,6 @@
 			$sorgu = "";
 			foreach($this->veri as $i => $k){
 				if($this->veri[$i] !== $this->cachedveri[$i]){
-					// echo $i.',';
 					if(stristr($this->columns[$i]['Type'],"text") || stristr($this->columns[$i]['Type'],"char"))
 					$sorgu .= "`".$i."`='".$k."',";
 					else if(stristr($this->columns[$i]['Type'],"datetime")){
@@ -378,7 +380,6 @@
 					}
 				}
 			}
-			// echo $sorgu;
 			return $sorgu;
 		}
 		
@@ -396,7 +397,6 @@
 				$sorgu .= $this->createUpdateValues();
 				$sorgu .= $this->createIdentifierForUpdating();
 				if($this->sorgu($sorgu)){
-					// echo $sorgu;
 					$this->updateable = false;
 					return true;
 				}
