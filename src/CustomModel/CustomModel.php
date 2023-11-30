@@ -1,13 +1,13 @@
 <? 
-/*
- * This file is a part of the php-custom-model project.
- *
- * Copyright (c) 2023-present osemk - Onur Erginer <onurerginer@gmail.com>
- *
- * This file is subject to the MIT license that is bundled
- * with this source code in the LICENSE.md file.
- */
-
+	/*
+		* This file is a part of the php-custom-model project.
+		*
+		* Copyright (c) 2023-present osemk - Onur Erginer <onurerginer@gmail.com>
+		*
+		* This file is subject to the MIT license that is bundled
+		* with this source code in the LICENSE.md file.
+	*/
+	
 	
 	class CustomModel extends Veritabani {
 		public $veri =[];
@@ -284,14 +284,12 @@
 		
 		public function save(){
 			
-			$this->checkUpdateable();
-			if($this->updateable){
+			if($this->insertable){
+				return $this->insert(true);
+			}
+			else{
+				$this->checkUpdateable();
 				return $this->update(true);
-				}else{
-				if($this->insertable){
-					return $this->insert(true);
-				}
-				else return false;
 			}
 		}
 		
@@ -407,7 +405,7 @@
 				if(!$hatasorgugoster) // bu hatasorgu göster hem sorgu göstermek için hem de updateable değilse bir şey yapma
 				throw new Exception("Nothing changed ,the object isn't updateable");
 				else
-					return true;
+				return true;
 			}
 		}
 		
@@ -439,4 +437,4 @@
 		public function setProperties($tbl, $id=0){
 			self::__construct($tbl, $id);
 		}
-	}																								
+	}																									
