@@ -13,7 +13,7 @@
         "wiki": "https://github.com/osemk/PHPCustomModel/blob/main/readme.md"
     },
     "require": {
-        "php": "^7.3",
+        "php": "^7.3"
     },
     "autoload": {
         "psr-4": {
