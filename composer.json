@@ -17,8 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CustomModel\\": "src/CustomModel",
-            "CustomModel\\": "src/Veritabani",
+            "CustomModel\\": "src/",
         }
     }
 }
