@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CustomModel\\": "src/",
+            "CustomModel\\": "src/"
         }
     }
 }
